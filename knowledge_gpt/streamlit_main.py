@@ -22,8 +22,10 @@ def clear_submit():
 
 
 st.set_page_config(page_title="Ask Doc", page_icon="📖", layout="wide")
-st.header("📖Ask Doc")
+st.header("Ask Doc")
 
+# Hide the "Hide fork" option from the menu
+st.set_page_config(hide_fork_menu=True)
 
 hide_default_format = """
        <style>
@@ -61,20 +63,20 @@ if uploaded_file is not None:
     except OpenAIError as e:
         st.error(e._message)
 
-query = st.text_area("Ask a question about the document 对文件提问题", on_change=clear_submit)
+query = st.text_area("Ask a question about the document", on_change=clear_submit)
 with st.expander("Advanced Options"):
     show_all_chunks = st.checkbox("Show all chunks retrieved from vector search")
     show_full_doc = st.checkbox("Show parsed contents of the document")
 
 if show_full_doc and doc:
     with st.expander("Document"):
-        # Hack to get around st.markdown rendering LaTeX
+        Hack to get around st.markdown rendering LaTeX
         st.markdown(f"<p>{wrap_text_in_html(doc)}</p>", unsafe_allow_html=True)
 
 button = st.button("Submit")
 if button or st.session_state.get("submit"):
     if not st.session_state.get("api_key_configured"):
-        st.error("Please configure your OpenAI API key!")
+        # st.error("Please configure your OpenAI API key!")
     elif not index:
         st.error("Please upload a document!")
     elif not query:
