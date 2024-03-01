@@ -22,7 +22,7 @@ def clear_submit():
 
 
 st.set_page_config(page_title="Ask Doc", page_icon="📖", layout="wide")
-st.header("Ask Doc")
+st.header("Chat with Your Healthcare Documents")
 
 #----------------------Hide Streamlit footer----------------------------
 hide_st_style = """
