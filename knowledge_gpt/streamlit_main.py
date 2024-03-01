@@ -21,11 +21,8 @@ def clear_submit():
     st.session_state["submit"] = False
 
 
-st.set_page_config(page_title="Ask Doc", page_icon="📖", layout="wide")
+st.set_page_config(page_title="Ask Doc", page_icon="📖", hide_fork_menu=True, layout="wide")
 st.header("Ask Doc")
-
-# Hide the "Hide fork" option from the menu
-st.set_page_config(hide_fork_menu=True)
 
 hide_default_format = """
        <style>
