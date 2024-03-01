@@ -70,7 +70,7 @@ with st.expander("Advanced Options"):
 
 if show_full_doc and doc:
     with st.expander("Document"):
-        Hack to get around st.markdown rendering LaTeX
+        # Hack to get around st.markdown rendering LaTeX
         st.markdown(f"<p>{wrap_text_in_html(doc)}</p>", unsafe_allow_html=True)
 
 button = st.button("Submit")
