@@ -25,7 +25,7 @@ st.set_page_config(page_title="Ask Doc", page_icon="📖", layout="wide")
 st.header("Ask Doc")
 
 #----------------------Hide Streamlit footer----------------------------
-hide_st_style = “”"
+hide_st_style = “”
 
 MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
