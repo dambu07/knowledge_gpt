@@ -21,7 +21,7 @@ def clear_submit():
     st.session_state["submit"] = False
 
 
-st.set_page_config(page_title="Ask Doc", page_icon="📖", hide_fork_menu=True, layout="wide")
+st.set_page_config(page_title="Ask Doc", page_icon="📖", layout="wide")
 st.header("Ask Doc")
 
 hide_default_format = """
