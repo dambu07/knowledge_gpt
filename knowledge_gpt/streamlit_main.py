@@ -3,7 +3,7 @@ from PIL import Image
 import os
 from openai.error import OpenAIError
 
-from knowledge_gpt.components.sidebar import sidebar
+# from knowledge_gpt.components.sidebar import sidebar
 from knowledge_gpt.utils import (
     embed_docs,
     get_answer,
