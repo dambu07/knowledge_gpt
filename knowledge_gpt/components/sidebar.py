@@ -1,4 +1,4 @@
-# import streamlit as st
+import streamlit as st
 
 # from knowledge_gpt.components.faq import faq
 
@@ -7,9 +7,9 @@ def set_openai_api_key(api_key: str):
     st.session_state["OPENAI_API_KEY"] = api_key
 
 
-# def sidebar():
-    # with st.sidebar:
-        # st.markdown(
+def sidebar():
+    with st.sidebar:
+        st.markdown(
             # "## How to use\n"
 #            "1. Enter your [OpenAI API key](https://platform.openai.com/account/api-keys) below🔑\n"  # noqa: E501
             # "1. Upload a pdf, docx, or txt file📄 (Currently we don't support scanned PDF)\n"
@@ -19,7 +19,7 @@ def set_openai_api_key(api_key: str):
        # api_key_input = st.text_input(
 #            "OpenAI API Key",
 #            type="password",
-           placeholder="Paste your OpenAI API key here (sk-...)",
+           placeholder="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",
 #            help="You can get your API key from https://platform.openai.com/account/api-keys.",  # noqa: E501
            value=st.session_state.get("OPENAI_API_KEY", ""),
 #        )
@@ -35,7 +35,7 @@ def set_openai_api_key(api_key: str):
             # "documents and get accurate answers with instant citations. "
             # "You can use it to /research a paper or practice your exam. "
         # )/
-        # st.markdown(
+        st.markdown(
             # "This tool is a work in progress. "
         # )
 
