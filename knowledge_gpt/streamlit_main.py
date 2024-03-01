@@ -21,8 +21,8 @@ def clear_submit():
     st.session_state["submit"] = False
 
 
-st.set_page_config(page_title="DocGPT", page_icon="📖", layout="wide")
-st.header("📖DocGPT")
+st.set_page_config(page_title="Ask Doc", page_icon="📖", layout="wide")
+st.header("📖Ask Doc")
 
 
 hide_default_format = """
@@ -33,12 +33,12 @@ hide_default_format = """
        """
 st.markdown(hide_default_format, unsafe_allow_html=True)
 
-sidebar()
+# sidebar()
 
 uploaded_file = st.file_uploader(
-    "Upload a pdf, docx, or txt file 上传文件",
+    "Upload a pdf, docx, or txt file",
     type=["pdf", "docx", "txt"],
-    help="Scanned documents are not supported yet! 扫描的文件不支持",
+    help="Scanned documents are not supported yet!",
     on_change=clear_submit,
 )
 
@@ -71,7 +71,7 @@ if show_full_doc and doc:
         # Hack to get around st.markdown rendering LaTeX
         st.markdown(f"<p>{wrap_text_in_html(doc)}</p>", unsafe_allow_html=True)
 
-button = st.button("Submit 提交")
+button = st.button("Submit")
 if button or st.session_state.get("submit"):
     if not st.session_state.get("api_key_configured"):
         st.error("Please configure your OpenAI API key!")
