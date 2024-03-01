@@ -24,13 +24,16 @@ def clear_submit():
 st.set_page_config(page_title="Ask Doc", page_icon="📖", layout="wide")
 st.header("Ask Doc")
 
-hide_default_format = """
-       <style>
-       #MainMenu {visibility: hidden; }
-       footer {visibility: hidden;}
-       </style>
-       """
-st.markdown(hide_default_format, unsafe_allow_html=True)
+#----------------------Hide Streamlit footer----------------------------
+hide_st_style = “”"
+
+MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+“”"
+st.markdown(hide_st_style, unsafe_allow_html=True)
+#--------------------------------------------------------------------
 
 # sidebar()
 
