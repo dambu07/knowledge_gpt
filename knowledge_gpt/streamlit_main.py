@@ -25,13 +25,13 @@ st.set_page_config(page_title="Ask Doc", page_icon="📖", layout="wide")
 st.header("Ask Doc")
 
 #----------------------Hide Streamlit footer----------------------------
-hide_st_style = “”
-
-MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-header {visibility: hidden;}
-
-“”"
+hide_st_style = """
+            <style>
+            MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 #--------------------------------------------------------------------
 
