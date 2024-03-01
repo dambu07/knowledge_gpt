@@ -4,7 +4,7 @@ import streamlit as st
 
 
 def set_openai_api_key(api_key: str):
-    st.session_state["OPENAI_API_KEY"] = api_key
+    st.session_state["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"] = api_key
 
 
 def sidebar():
