@@ -3,7 +3,7 @@ from PIL import Image
 import os
 from openai.error import OpenAIError
 
-# from knowledge_gpt.components.sidebar import sidebar
+from knowledge_gpt.components.sidebar import sidebar
 from knowledge_gpt.utils import (
     embed_docs,
     get_answer,
@@ -35,7 +35,7 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 #--------------------------------------------------------------------
 
-# sidebar()
+sidebar()
 
 uploaded_file = st.file_uploader(
     "Upload a pdf, docx, or txt file",
