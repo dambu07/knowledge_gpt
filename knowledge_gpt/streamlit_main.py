@@ -76,7 +76,7 @@ if show_full_doc and doc:
 button = st.button("Submit")
 if button or st.session_state.get("submit"):
     if not st.session_state.get("api_key_configured"):
-        # st.error("Please configure your OpenAI API key!")
+        st.error("Please configure your OpenAI API key!")
     elif not index:
         st.error("Please upload a document!")
     elif not query:
