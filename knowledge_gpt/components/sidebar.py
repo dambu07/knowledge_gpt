@@ -18,15 +18,15 @@ def sidebar():
         )
        # api_key_input = st.text_input(
 #            "OpenAI API Key",
-#            type="password",
+           type="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",
            placeholder="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",
 #            help="You can get your API key from https://platform.openai.com/account/api-keys.",  # noqa: E501
-           value=st.session_state.get("OPENAI_API_KEY", ""),
+           value=st.session_state.get("OPENAI_API_KEY", "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"),
 #        )
 # 
 #        if api_key_input:
 #            set_openai_api_key(api_key_input)
-        # set_openai_api_key(st.secrets["OPENAI_API_KEY"])
+        set_openai_api_key(st.secrets["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"])
         
         # st.markdown("---")
         # st.markdown("# About")
